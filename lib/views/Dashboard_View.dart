@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:response_dashboard/DashboardBody.dart';
+import 'package:response_dashboard/widgets/Custom_Drawer.dart';
+import 'package:response_dashboard/widgets/DashboardBody.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -7,6 +8,7 @@ class DashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      drawer: CustomDrawer(),
       body: DashboardBody(),
     );
   }
