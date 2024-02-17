@@ -11,6 +11,7 @@ class DesktopDashboard extends StatelessWidget {
     return const Row(
       children: [
         Expanded(
+          flex: 1,
           child: CustomDrawer(),
         ),
         SizedBox(
