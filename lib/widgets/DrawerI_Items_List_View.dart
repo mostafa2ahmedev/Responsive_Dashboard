@@ -24,13 +24,11 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
         image: Assets.imagesMyInvestments, name: 'My Investments')
   ];
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
       itemCount: drawerItems.length,
-      shrinkWrap:
-          true, // دي زي ما تقول بتعرف عدد الايتمز مساحتتهم اد ايه علطلول  ف خلاص مفيش احتياج للاكسباندد
-      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
@@ -38,6 +36,7 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
               if (selectedIndex != index) {
                 setState(() {
                   selectedIndex = index;
+
                   print(selectedIndex);
                 });
               }
