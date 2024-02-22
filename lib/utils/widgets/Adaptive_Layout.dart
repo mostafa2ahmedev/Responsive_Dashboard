@@ -7,8 +7,7 @@ class AdaptiveLayout extends StatelessWidget {
       required this.tabletDashboard,
       required this.desktopDashboard});
   final WidgetBuilder mobileDashboard, tabletDashboard, desktopDashboard;
-  // فيه فرق بين الودجت يبقي حصلها بيلد وبين ان هي  اتكريتت
-  // ف الويدجت ممكن تتكريت عادي ولكن لسه فلاتر معملتهلهاش بيلد
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

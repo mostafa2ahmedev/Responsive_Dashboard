@@ -13,9 +13,7 @@ class AllExpensesHeader extends StatelessWidget {
           'All Expenses',
           style: AppSytles.styleSemiBold20,
         ),
-        Expanded(
-          child: SizedBox(),
-        ),
+        Spacer(),
         CustomDropButton()
       ],
     );

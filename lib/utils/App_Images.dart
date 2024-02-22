@@ -1,5 +1,5 @@
 class Assets {
-  Assets._();
+  Assets._(); // private constructor == abstract class
 
   /// Assets for imagesAvatar1
   /// assets/images/avatar_1.svg

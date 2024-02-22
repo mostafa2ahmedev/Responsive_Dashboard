@@ -13,15 +13,15 @@ class DrawerItemListView extends StatefulWidget {
 }
 
 class _DrawerItemListViewState extends State<DrawerItemListView> {
-  List<DrawerItemModel> drawerItems = [
-    const DrawerItemModel(image: Assets.imagesDashboard, name: 'Dashboard'),
-    const DrawerItemModel(
-        image: Assets.imagesMyInvestments, name: 'My Transaction'),
-    const DrawerItemModel(image: Assets.imagesStatistics, name: 'Statistics'),
-    const DrawerItemModel(
-        image: Assets.imagesWalletAccount, name: 'Wallet Account'),
-    const DrawerItemModel(
-        image: Assets.imagesMyInvestments, name: 'My Investments')
+  static const List<DrawerItemModel> drawerItems = [
+    // حطيت كونست عند الكونستراكتور عشان اقدر احط كونست هنا عشان يتبنو اثناء الكومابيل تايم
+    // وكونت يعني تتنشا مره واحده بس وبعد كدا استدعيها  وبما انها هتتنشا مره واحده بس ف لازم تكون ستاتيك عشان تبقي خاصه بالكلاس مش كل
+    // ما استدعي اوبجكت من الكلاس دا ينشاها تاني
+    DrawerItemModel(image: Assets.imagesDashboard, name: 'Dashboard'),
+    DrawerItemModel(image: Assets.imagesMyInvestments, name: 'My Transaction'),
+    DrawerItemModel(image: Assets.imagesStatistics, name: 'Statistics'),
+    DrawerItemModel(image: Assets.imagesWalletAccount, name: 'Wallet Account'),
+    DrawerItemModel(image: Assets.imagesMyInvestments, name: 'My Investments')
   ];
   int selectedIndex = 0;
 
