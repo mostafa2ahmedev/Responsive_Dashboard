@@ -17,6 +17,7 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: List.generate(
           items.length, (index) => ItemDetails(itemDetails: items[index])),
     );
