@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:response_dashboard/utils/SizeConfig.dart';
 import 'package:response_dashboard/widgets/Custom_Drawer.dart';
 import 'package:response_dashboard/widgets/DashboardBody.dart';
 
@@ -15,9 +16,10 @@ class _DashboardViewState extends State<DashboardView> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       key: keyS,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: SizeConfig.width < SizeConfig.tabletBreak
           ? AppBar(
               backgroundColor: const Color(0xfffafafa),
               leading: GestureDetector(
