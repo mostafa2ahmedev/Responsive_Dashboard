@@ -16,6 +16,10 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: List.generate(
+          items.length, (index) => ItemDetails(itemDetails: items[index])),
+    );
     return ListView.builder(
       shrinkWrap: true,
       itemCount: items.length,
