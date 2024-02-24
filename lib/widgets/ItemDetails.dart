@@ -41,11 +41,11 @@ class ItemDetails extends StatelessWidget {
     return ListTile(
       title: Text(
         itemDetails.title,
-        style: AppSytles.styleRegular16,
+        style: AppSytles.styleRegular16(context),
       ),
       trailing: Text(
         itemDetails.value,
-        style: AppSytles.styleMeduim16,
+        style: AppSytles.styleMeduim16(context),
       ),
       leading: Container(
         width: 12,

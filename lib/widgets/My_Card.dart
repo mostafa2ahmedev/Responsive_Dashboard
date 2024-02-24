@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:response_dashboard/utils/App_Images.dart';
 import 'package:response_dashboard/utils/App_Styles.dart';
@@ -47,11 +48,12 @@ class MyCard extends StatelessWidget {
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   'Name card',
-                  style: AppSytles.styleRegular16.copyWith(color: Colors.white),
+                  style: AppSytles.styleRegular16(context)
+                      .copyWith(color: Colors.white),
                 ),
-                subtitle: const Text(
+                subtitle: Text(
                   'Ali Fayyad',
-                  style: AppSytles.styleMeduim20,
+                  style: AppSytles.styleMeduim20(context),
                 ),
                 trailing: SvgPicture.asset(Assets.imagesGallery),
               ),
@@ -64,19 +66,30 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '1232 1232 5454 6445',
-                    style:
-                        AppSytles.styleSemiBold24.copyWith(color: Colors.white),
+                    style: AppSytles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white),
                   ),
                   Text(
                     '12 / 20 - 134',
-                    style:
-                        AppSytles.styleRegular16.copyWith(color: Colors.white),
+                    style: AppSytles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 54 - 28,
+            // المشكله دي ظهرت لما قلينا شويه  ف الهايت عمل مشكله  لان انا دلةقتي حاطط  فيكسد هايت علي الرغم ان مفيش مساحه احط فيها هايت
+            //  ف لو شيلت السايز بوكس هتتحل معاك   ف انا عرفت المشكله فين
+
+            // ف الهايت دي كويس لو فيه مساحه ولكن مش كويس لو مفيش مساحه
+            //  ف هل فيه طريقه ممكن استخدمها  تخلي لو فيه مساحه ناخد المكان بتاعنا ولو مكانش نقل شويه  ولو مكانش فيه خالص نختفي
+            //  ممكن طبعا اعملها عن طريق اني اتشيك ع اللايوت بتاعك يعني اشوف النقطه الي عندها هتبوظ وكدا وابدا  اظهرها واخفيها
+            //  لكن  بالفعل فيه ويدجت بتعمل العمليه دي احسن واسرع بتخلي التشايلد بتاعنا فلكسابل يعني من الاخر لو  مفيش مساحه هيقل ولو فيه
+            // هياخد  المساحه الطبيعيه بتاعته  ولو فيه مساحه حبه صغيره هيكبر وياخدها برده
+            //
+            const Flexible(
+              child: SizedBox(
+                height: 26,
+              ),
             ),
           ],
         ),

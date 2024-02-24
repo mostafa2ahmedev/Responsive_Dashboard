@@ -31,7 +31,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
             value: 40,
             title: activeIndex == 0 ? "Design Service" : '40%',
-            titleStyle: AppSytles.styleMeduim16
+            titleStyle: AppSytles.styleMeduim16(context)
                 .copyWith(color: activeIndex == 0 ? null : Colors.white),
             radius: activeIndex == 0 ? 60 : 50,
             color: const Color(
@@ -42,7 +42,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             titlePositionPercentageOffset: activeIndex == 1 ? 1.5 : null,
             value: 40,
             title: activeIndex == 1 ? "Design Product" : '40%',
-            titleStyle: AppSytles.styleMeduim16
+            titleStyle: AppSytles.styleMeduim16(context)
                 .copyWith(color: activeIndex == 1 ? null : Colors.white),
             radius: activeIndex == 1 ? 60 : 50,
             color: const Color(
@@ -53,7 +53,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             titlePositionPercentageOffset: activeIndex == 2 ? 1.5 : null,
             value: 40,
             title: activeIndex == 2 ? "Product royalti" : '40%',
-            titleStyle: AppSytles.styleMeduim16
+            titleStyle: AppSytles.styleMeduim16(context)
                 .copyWith(color: activeIndex == 2 ? null : Colors.white),
             radius: activeIndex == 2 ? 60 : 50,
             color: const Color(
@@ -64,7 +64,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
             value: 40,
             title: activeIndex == 3 ? "Other" : '40%',
-            titleStyle: AppSytles.styleMeduim16
+            titleStyle: AppSytles.styleMeduim16(context)
                 .copyWith(color: activeIndex == 3 ? null : Colors.white),
             radius: activeIndex == 3 ? 60 : 50,
             color: const Color(

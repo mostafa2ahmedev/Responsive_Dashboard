@@ -17,9 +17,9 @@ class CustomDropButton extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Text(
+          Text(
             'Monthly',
-            style: AppSytles.styleMeduim16,
+            style: AppSytles.styleMeduim16(context),
           ),
           const SizedBox(
             width: 18,
