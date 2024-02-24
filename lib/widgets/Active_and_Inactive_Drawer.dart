@@ -15,9 +15,16 @@ class InActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.name,
-        style: AppSytles.styleRegular16(context),
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          // معني ان التيكست نزل ف سطرين ان هي متطبق عليها كونسترينت محدده يعني متحدد الويدث بتاعها ف بالتالي اقدر استخدم
+          // فيتد بوكس ف  يتعمل سكيل داون لها
+
+          drawerItemModel.name,
+          style: AppSytles.styleRegular16(context),
+        ),
       ),
     );
   }
